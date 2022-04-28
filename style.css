@@ -17,13 +17,13 @@ html {
   }
 
   h3{
-      font-size:2.4;
+      font-size:2.4em;
   }
   
   h4{
-      font-size:2.0;
+      font-size:2.0em;
   }
-  
+
   p,li {
     font-size: 1.7em;
   }
