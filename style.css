@@ -6,8 +6,12 @@ html {
   body {
     width: 80em;
     margin: 0 auto;
+    background-color: darkgray;  
   }
-
+  
+  main{
+      margin: 5em;
+  }
   h1 {
     font-size: 4em;
   }
@@ -24,7 +28,7 @@ html {
       font-size:2.0em;
   }
 
-  p,li {
+  p {
     font-size: 1.7em;
   }
 
