@@ -4,9 +4,9 @@ html {
   }
   
   body {
-    width: 80em;
+    
     margin: 0 auto;
-    background-color: darkgray;  
+    background-color: rgb(219, 217, 217);  
   }
   
   main{
