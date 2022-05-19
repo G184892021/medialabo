@@ -8,9 +8,7 @@ let kaisu = 0;
 // 予想を4回実行する
 // 将来: ボタンを押したら， hantei() を呼び出すように修正する
 hantei();
-hantei();
-hantei();
-hantei();
+
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
@@ -44,3 +42,11 @@ function hantei() {
         console.log('答えは '+kotae+' でした．すでにゲームは終わっています')
     }
 }
+
+let s = document.querySelector('span#kaisu');
+s.textContent = kaisu;
+let t = document.querySelector('span#yoso');
+t.textContent = yoso;
+let k = document.querySelector('span#katae');
+k.textContent = kotae;
+
