@@ -46,11 +46,52 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(data.name);
-console.log(data.coord.lon);
-console.log(data.coord.lat);
-for(let a of data.weather){
-  console.log(a.description)
+let a = document.querySelector('button#print');
+a.addEventListener('click', search);
+
+function search() {
+  let b = document.querySelector('input[name="tosi"]');
+	let c = b.value;
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+ c + '.json';
+
+  axios.get(url)
+	  	.then(showResult)
+	  	.catch(showError)
+	  	.then(finish);
 }
-console.log(data.main.temp_max);
-console.log(data.main.temp_min);
+
+// 通信が成功した時の処理
+function showResult(resp) {
+	// サーバから送られてきたデータを出力
+	let data = resp.data;
+
+	// data が文字列型なら，オブジェクトに変換する
+	if (typeof data === 'string') {
+		data = JSON.parse(data);
+	}
+
+  let d = document.querySelector('span#timei');
+  d.textContent=data.name;
+
+  let e = document.querySelector('span#tetnki');
+  e.textContent=data.weather.description;
+
+  let f = document.querySelector('span#max');
+  f.textContent=data.main.temp_max + '℃';
+	
+  let g = document.querySelector('span#min');
+  g.textContent=data.main.temp_min+ '℃';
+
+  let h = document.querySelector('span#shitsudo')
+  h.textContent=data.main.humidity+ '%';
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+	console.log(err);
+}	
+
+// 通信の最後にいつも実行する処理
+function finish() {
+	console.log('Ajax 通信が終わりました');
+}

@@ -4,7 +4,7 @@ console.log('答え: ' + kotae);
 let kaisu=1;
 let yoso;
 let k2=1;
-let se = 0;
+let seikai = 0;
 
 let y = document.querySelector('#print');
 y.addEventListener('click',hantei);
