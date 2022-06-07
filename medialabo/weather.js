@@ -81,7 +81,7 @@ function showResult(resp) {
   let g = document.querySelector('span#min');
   g.textContent=data.main.temp_min+ '℃';
 
-  let h = document.querySelector('span#shitsudo')
+  let h = document.querySelector('span#situdo')
   h.textContent=data.main.humidity+ '%';
 }
 
