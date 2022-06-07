@@ -73,7 +73,11 @@ function showResult(resp) {
   let d = document.querySelector('span#timei');
   d.textContent=data.name;
 
-  
+  let e1 = document.querySelector('span#ido');
+  e1.textContent=data.coord.lon + '°';
+
+  let e2 = document.querySelector('span#keido');
+  e2.textContent=data.coord.lat + '°';
 
   let f = document.querySelector('span#max');
   f.textContent=data.main.temp_max + '℃';
@@ -81,7 +85,7 @@ function showResult(resp) {
   let g = document.querySelector('span#min');
   g.textContent=data.main.temp_min+ '℃';
 
-  let h = document.querySelector('span#shitsudo')
+  let h = document.querySelector('span#situdo');
   h.textContent=data.main.humidity+ '%';
 }
 

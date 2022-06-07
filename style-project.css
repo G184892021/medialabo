@@ -1,27 +1,48 @@
-h1 {
-    border: 5px solid rgb(116, 211, 73);
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 180px;
-    background: rgb(221, 208, 29);
+header {
+    background-color:#e54800;
+    padding:0.8em;
+    margin-bottom: 2em;
+  }
+
+  button{
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  div{
+    border:8px ridge red;
+    width: 20em;
+    padding-left: 1.5em;
   }
   
   table {
-    margin-left: auto;
-    margin-right: auto;
+    margin-top:1em ;
     width: 1000px;
     font-size: 30px;
+    margin-bottom: 2em ;
   }
   
   table th{
-    border:1px solid #000066;
-    background:royalblue;
+    border:1px solid #000000;
+    background:rgb(217, 70, 70);
+    
   }
      
   table td{
-    border:1px solid #000066;
+    border:1px solid #000000;
     background:#ffffff;
     height: 40px;
+  }
+
+  ul{
+    border:thick double rgb(109, 18, 18);
+    background:  rgb(240, 234, 214);
+    margin: 30px;
+    padding-bottom: 1em;
+    width: 55em;
+  }
+
+  body{
+    background-color: antiquewhite;
   }
   
