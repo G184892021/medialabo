@@ -2,23 +2,23 @@ let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え: ' + kotae);    
 
 let kaisu=1;
+let owari=0;
 let yoso;
-let k2=1;
 let seikai = 0;
 
-let y = document.querySelector('#print');
-y.addEventListener('click',hantei);
+let a = document.querySelector('#print');
+a.addEventListener('click',hantei);
 
 function hantei() {
-    let i=document.querySelector('input[name="kaitou" ]')
-    let r = i.value;
-    yoso=Number(r);
-    let s = document.querySelector('span#kaisu');
-    s.textContent = kaisu;
-    let t = document.querySelector('span#yoso');
-    t.textContent = yoso;
+    let b=document.querySelector('input[name="kaitou" ]')
+    let c = b.value;
+    yoso=Number(c);
+    let e = document.querySelector('span#kaisu');
+    e.textContent = kaisu;
+    let f = document.querySelector('span#yoso');
+    f.textContent = yoso;
     
-    if(kaisu<4 && k2<4){
+    if(kaisu<4 && owari<1){
         console.log(kaisu+"回目の予想："+yoso);
         if(kaisu===3 && yoso !== kotae){
             let k =("まちがい、残念でした答えは"+kotae+"です。");
@@ -37,7 +37,7 @@ function hantei() {
             let d =  document.querySelector('p#result');
             d.textContent=k;
             seikai++;
-            kaisu+=3;
+            owari++;
         }
         
     }else{
